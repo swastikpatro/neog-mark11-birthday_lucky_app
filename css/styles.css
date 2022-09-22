@@ -452,6 +452,7 @@ p span {
 }
 
 .date-input input {
+  background: var(--white);
   max-width: 150px;
 }
 

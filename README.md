@@ -18,6 +18,6 @@ A website which can help you to check whether your birthday is lucky or not. Ent
 
     - If you click 'clear' button now, 'All Lucky Nums' button is removed with inputs & output cleared and a confirmation alert is seen.
 
-    - If you click 'All lucky nums' button, irrespective of the output, a confirmation alert can be seen showing all the lucky numbers for that birthdate.
+    - If you click 'All lucky nums' button, irrespective of the output(right or wrong), a paragraph can be seen showing all the lucky numbers for that birthdate respectively.
 
   - ### If you click on any inputs with "All lucky Nums" button present on the screen, I take it as the user is changing inputs so "All lucky Nums" button gets removed.
