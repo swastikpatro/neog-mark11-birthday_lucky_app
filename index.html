@@ -19,40 +19,40 @@
       <h1 class="heading">is your birthday lucky? 🤔</h1>
       <p>
         Enter your birthdate and a number, we'll let you know whether is your
-        birthday lucky or not..
+        birthday lucky or not. <span>Don't worry we don't save your data.</span>
       </p>
       <div class="alert"></div>
     </header>
 
     <form name="form">
-      <div class="date-input">
-        <label for="date-input">birthdate:</label>
-        <input
-          type="date"
-          name="date-input"
-          id="date-input"
-          placeholder="enter your birthdate"
-        />
-      </div>
-      <div class="lucky-input">
-        <label for="lucky-input">lucky number:</label>
+      <div class="inputs">
+        <div class="date-input">
+          <label for="date-input">birthdate:</label>
+          <input
+            type="date"
+            name="date-input"
+            id="date-input"
+            placeholder="enter your birthdate"
+          />
+        </div>
+        <div class="lucky-input">
+          <label for="lucky-input">lucky number:</label>
 
-        <input
-          type="number"
-          name="lucky-input"
-          id="lucky-input"
-          placeholder="enter the number"
-        />
+          <input
+            type="number"
+            name="lucky-input"
+            id="lucky-input"
+            placeholder="enter the number"
+          />
+        </div>
       </div>
       <div class="btn-container">
         <button class="btn" data-btn="check">Check</button>
         <button class="btn" data-btn="clear">Clear</button>
       </div>
-    </form>
 
-    <section class="output-section">
-      <textarea></textarea>
-    </section>
+      <div class="output-section"></div>
+    </form>
 
     <!-- footer -->
     <footer class="footer">
