@@ -545,7 +545,7 @@ p span {
   margin-right: auto;
   color: var(--primary-700);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   letter-spacing: var(--letterSpacing);
 }
 
