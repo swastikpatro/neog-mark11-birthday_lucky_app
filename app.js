@@ -30,7 +30,7 @@ function alertMsg(type, msg, ms) {
 const dateToSum = (aDate) => {
   const myDateArr = [
     ...`${aDate.getDate()}${aDate.getMonth() + 1}${aDate.getFullYear()}`,
-  ].map((item) => parseInt(item));
+  ].map((item) => Number(item));
 
   const mySum = myDateArr.reduce((acc, curr) => {
     acc = curr + acc;
