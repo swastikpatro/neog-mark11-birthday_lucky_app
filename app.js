@@ -84,12 +84,12 @@ function handleContainerClick(e) {
     numberInput.value = '';
     output.innerText = '';
     removeLuckyBtn();
-    alertMsg('success', 'Cleared', 1000);
+    alertMsg('success', 'Cleared', 500);
     return;
   }
 
   if (!(birthInput.value && numberInput.value)) {
-    alertMsg('danger', 'Please fill both input fields 🙏', 1000);
+    alertMsg('danger', 'Please fill both input fields 🙏', 500);
     return;
   }
 
@@ -111,7 +111,7 @@ function handleContainerClick(e) {
     output.innerText = `${numberVal} is not that lucky 😕`;
   }
 
-  alertMsg('success', 'Done ✅', 1000);
+  alertMsg('success', 'Done ✅', 500);
 }
 
 btnContainer.addEventListener('click', handleContainerClick);
