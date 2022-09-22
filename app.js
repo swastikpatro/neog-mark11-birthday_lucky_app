@@ -25,3 +25,93 @@ function alertMsg(type, msg, ms) {
     alertText.classList.remove('show-alert');
   }, ms);
 }
+
+const dateToSum = (aDate) => {
+  const myDateArr = [
+    ...`${aDate.getDate()}${aDate.getMonth() + 1}${aDate.getFullYear()}`,
+  ].map((item) => parseInt(item));
+
+  const mySum = myDateArr.reduce((acc, curr) => {
+    acc = curr + acc;
+    return acc;
+  }, 0);
+
+  return mySum;
+};
+
+function showLuckyNumsByAlert(dateSum) {
+  const arrOfLuckyNumbers = [];
+  for (let i = dateSum * -1; i <= dateSum; i++) {
+    if (dateSum % i === 0) {
+      arrOfLuckyNumbers.push(i);
+    }
+  }
+
+  const luckyMsg = `Your lucky nums are ${arrOfLuckyNumbers.join(', ')} 😉`;
+
+  alertMsg('success', luckyMsg, 1000);
+}
+
+function removeLuckyBtn() {
+  const luckyElement = btnContainer.querySelector('[data-btn="show"]');
+  if (!luckyElement) {
+    return;
+  }
+  btnContainer.style.gridTemplateColumns = '1fr 1fr';
+  btnContainer.style.justifyItems = 'center';
+  luckyElement.remove();
+}
+
+function showLuckyBtn() {
+  btnContainer.appendChild(luckyBtn);
+  btnContainer.style.justifyItems = 'start';
+  btnContainer.style.gridTemplateColumns = '1fr 1fr 1fr';
+  return;
+}
+
+function handleContainerClick(e) {
+  e.preventDefault();
+  if (!('btn' in e.target.dataset)) {
+    return;
+  }
+
+  const btnClicked = e.target.dataset.btn;
+  const birthDate = birthInput.valueAsDate;
+  const numberVal = numberInput.valueAsNumber;
+
+  if (btnClicked === 'clear') {
+    birthInput.value = '';
+    numberInput.value = '';
+    output.innerText = '';
+    removeLuckyBtn();
+    alertMsg('success', 'Cleared', 1000);
+    return;
+  }
+
+  if (!(birthInput.value && numberInput.value)) {
+    alertMsg('danger', 'Please fill both input fields 🙏', 1000);
+    return;
+  }
+
+  const sumOfDate = dateToSum(birthDate);
+
+  if (
+    btnContainer.querySelector('[data-btn="show"]') &&
+    btnClicked === 'show'
+  ) {
+    showLuckyNumsByAlert(sumOfDate);
+    return;
+  }
+
+  showLuckyBtn();
+
+  if (sumOfDate % numberVal === 0) {
+    output.innerText = `${numberVal} is a lucky number 🎉🎊`;
+  } else {
+    output.innerText = `${numberVal} is not that lucky 😕`;
+  }
+
+  alertMsg('success', 'Done ✅', 1000);
+}
+
+btnContainer.addEventListener('click', handleContainerClick);
