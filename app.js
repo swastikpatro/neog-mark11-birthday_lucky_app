@@ -115,3 +115,9 @@ function handleContainerClick(e) {
 }
 
 btnContainer.addEventListener('click', handleContainerClick);
+
+document.querySelectorAll('input').forEach((singleInput) => {
+  singleInput.addEventListener('click', () => {
+    removeLuckyBtn();
+  });
+});
