@@ -5,6 +5,7 @@ const numberInput = document.querySelector('#lucky-input');
 const btnContainer = document.querySelector('.btn-container');
 const output = document.querySelector('.output-section');
 const alertText = document.querySelector('.alert');
+const luckyPara = document.querySelector('.lucky-msg');
 
 // lucky-btn
 const luckyBtn = document.createElement('button');
@@ -49,7 +50,7 @@ function showLuckyNumsByAlert(dateSum) {
 
   const luckyMsg = `Your lucky nums are ${arrOfLuckyNumbers.join(', ')} 😉`;
 
-  alertMsg('success', luckyMsg, 1000);
+  luckyPara.innerText = luckyMsg;
 }
 
 function removeLuckyBtn() {
@@ -60,6 +61,7 @@ function removeLuckyBtn() {
   btnContainer.style.gridTemplateColumns = '1fr 1fr';
   btnContainer.style.justifyItems = 'center';
   luckyElement.remove();
+  luckyPara.innerText = '';
 }
 
 function showLuckyBtn() {
