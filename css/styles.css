@@ -545,11 +545,14 @@ p span {
   margin-right: auto;
   color: var(--primary-700);
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 0.85rem;
   letter-spacing: var(--letterSpacing);
 }
 
 @media screen and (min-width: 768px) {
+  .lucky-msg {
+    font-size: 1.25rem;
+  }
   .footer h2 {
     font-size: 1.75rem;
   }
