@@ -532,6 +532,18 @@ p span {
   color: var(--primary-100);
 }
 
+.lucky-msg {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--primary-700);
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: var(--letterSpacing);
+}
+
 @media screen and (min-width: 768px) {
   .footer h2 {
     font-size: 1.75rem;
