@@ -393,7 +393,7 @@ p span {
 .date-input,
 .lucky-input {
   /* border: 2px solid red; */
-  width: fit-content;
+  width: 100%;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -449,6 +449,10 @@ p span {
 .btn {
   font-size: 0.65rem;
   padding: 0.35rem 0.5rem;
+}
+
+.date-input input {
+  max-width: 150px;
 }
 
 @media screen and (min-width: 680px) {
