@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%F0%9F%92%B0%EF%B8%8F%3C%2Ftext%3E%3C%2Fsvg%3E"
+      type="image/svg+xml"
+    />
+    <title>Cash Register App</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="heading">is your birthday lucky? 🤔</h1>
+      <p>
+        Enter your birthdate and a number, we'll let you know whether is your
+        birthday lucky or not..
+      </p>
+      <div class="alert"></div>
+    </header>
+
+    <form name="form">
+      <div class="date-input">
+        <label for="date-input">birthdate:</label>
+        <input
+          type="date"
+          name="date-input"
+          id="date-input"
+          placeholder="enter your birthdate"
+        />
+      </div>
+      <div class="lucky-input">
+        <label for="lucky-input">lucky number:</label>
+
+        <input
+          type="number"
+          name="lucky-input"
+          id="lucky-input"
+          placeholder="enter the number"
+        />
+      </div>
+      <div class="btn-container">
+        <button class="btn" data-btn="check">Check</button>
+        <button class="btn" data-btn="clear">Clear</button>
+      </div>
+    </form>
+
+    <section class="output-section">
+      <textarea></textarea>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <h2>social links</h2>
+      <ul class="footer-links">
+        <li>
+          <a href="https://github.com/swastikpatro" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/Swastik2001" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/swastik-patro-2a54bb19b/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://swastik-patro-portfolio.netlify.app/" target="_blank"
+            ><i class="fa-solid fa-page"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <!-- end of footer -->
+  </body>
+</html>
