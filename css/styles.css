@@ -308,15 +308,6 @@ Lucky Birthday App
   transition: var(--transition);
 }
 
-.alert-danger {
-  background: var(--red-dark);
-  color: var(--red-light);
-}
-.alert-success {
-  background: var(--green-light);
-  color: var(--green-dark);
-}
-
 .alert.show-alert {
   top: 5%;
   opacity: 1;
@@ -345,11 +336,11 @@ body {
   display: grid;
   place-items: center;
   letter-spacing: var(--letterSpacing);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .header p {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   margin: 0 auto;
   width: 80vw;
   max-width: 500px;
@@ -359,6 +350,7 @@ body {
 }
 
 p span {
+  font-size: 0.9rem;
   color: var(--grey-900);
 }
 
@@ -524,11 +516,11 @@ p span {
   width: 40vw;
   max-width: 300px;
   margin: 0 auto;
-  margin-top: -0.25rem;
+  margin-top: -0.35rem;
 }
 
 .footer-links a {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: var(--primary-800);
   transition: var(--transition);
 }
