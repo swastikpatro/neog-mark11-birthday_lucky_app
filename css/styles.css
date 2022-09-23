@@ -472,13 +472,18 @@ p span {
   width: 85%;
   max-width: 400px;
   margin: 0 auto;
+  padding-top: 0.25rem;
   border-radius: var(--borderRadius);
   background: var(--white);
-  display: grid;
-  place-items: center;
+  text-align: center;
   font-size: 0.85rem;
   color: var(--grey-500);
   letter-spacing: var(--letterSpacing);
+}
+
+.output-section span {
+  font-size: 1.25rem;
+  font-weight: 800;
 }
 
 @media screen and (min-width: 1000px) {

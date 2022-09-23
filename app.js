@@ -112,9 +112,19 @@ function handleContainerClick(e) {
   showLuckyBtn();
 
   if (sumOfDate % numberVal === 0) {
-    output.innerText = `${numberVal} is a lucky number 🎉🎊`;
+    output.innerHTML = `
+    <span class='output-num'>
+    ${numberVal}
+    </span> is a lucky number 🎉🎊
+    `;
+    output.querySelector('.output-num').style.color = 'green';
   } else {
-    output.innerText = `${numberVal} is not that lucky 😕`;
+    output.innerHTML = `
+    <span class='output-num'>
+      ${numberVal}
+    </span> is not that lucky 😕
+    `;
+    output.querySelector('.output-num').style.color = 'red';
   }
 
   alertMsg('success', 'Done ✅', 1000);
