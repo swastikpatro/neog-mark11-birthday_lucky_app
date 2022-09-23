@@ -42,7 +42,7 @@ const dateToSum = (aDate) => {
 
 function showLuckyNumsByAlert(dateSum) {
   const arrOfLuckyNumbers = [];
-  for (let i = dateSum * -1; i <= dateSum; i++) {
+  for (let i = 1; i <= dateSum; i++) {
     if (dateSum % i === 0) {
       arrOfLuckyNumbers.push(i);
     }
@@ -92,6 +92,10 @@ function handleContainerClick(e) {
 
   if (!(birthInput.value && numberInput.value)) {
     alertMsg('danger', 'Please fill both input fields 🙏', 1000);
+    return;
+  }
+  if (numberVal < 0) {
+    alertMsg('danger', 'Lucky number cant be negative ❌', 1000);
     return;
   }
 
