@@ -8,6 +8,9 @@ A website which can help you to check whether your birthday is lucky or not. Ent
 
 - Enter BirthDate
 - Enter Lucky Number
+- Alerts can be seen
+  - when both input fields are empty.
+  - when lucky number input is negative.
 - If you click on 'clear' button, it clears both inputs, clears output and sends a confirmation alert of 'Cleared'.
 - If you click 'check' button without both inputs, a alert for filling inputs is shown.
 - If you click on 'Check' button with inputs, the output is seen below, and confirmation is done with a alert message "Done ✅".
