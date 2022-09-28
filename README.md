@@ -4,6 +4,12 @@ A website which can help you to check whether your birthday is lucky or not. Ent
 
 ## [Live Link](https://mark11-birthday-lucky-app.vercel.app/)
 
+## Tech Used
+
+- HTML
+- CSS
+- JS
+
 # <font color="pink"> **How it works ?**</font>
 
 - Enter BirthDate
