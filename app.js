@@ -71,6 +71,14 @@ function showLuckyBtn() {
   return;
 }
 
+function displayOutput(numberValue, cond) {
+  output.innerHTML = `
+    <span class='output-num' style="color:${cond ? 'green' : 'red'}">
+    ${numberValue}
+    </span> is ${cond ? 'a lucky number 🎉🎊' : 'not that lucky 😕'} 
+    `;
+}
+
 function handleContainerClick(e) {
   e.preventDefault();
   if (!('btn' in e.target.dataset)) {
@@ -112,19 +120,9 @@ function handleContainerClick(e) {
   showLuckyBtn();
 
   if (sumOfDate % numberVal === 0) {
-    output.innerHTML = `
-    <span class='output-num'>
-    ${numberVal}
-    </span> is a lucky number 🎉🎊
-    `;
-    output.querySelector('.output-num').style.color = 'green';
+    displayOutput(numberVal, true);
   } else {
-    output.innerHTML = `
-    <span class='output-num'>
-      ${numberVal}
-    </span> is not that lucky 😕
-    `;
-    output.querySelector('.output-num').style.color = 'red';
+    displayOutput(numberVal, false);
   }
 
   alertMsg('success', 'Done ✅', 1000);
