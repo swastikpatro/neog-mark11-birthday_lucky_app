@@ -1,10 +1,9 @@
-console.log('Hare Krishna');
+// console.log('Hare Krishna');
 
 const birthInput = document.querySelector('#date-input');
 const numberInput = document.querySelector('#lucky-input');
 const btnContainer = document.querySelector('.btn-container');
 const output = document.querySelector('.output-section');
-const alertText = document.querySelector('.alert');
 const luckyPara = document.querySelector('.lucky-msg');
 
 // lucky-btn
@@ -12,20 +11,6 @@ const luckyBtn = document.createElement('button');
 luckyBtn.classList.add('btn');
 luckyBtn.setAttribute('data-btn', 'show');
 luckyBtn.innerText = 'All Lucky Nums';
-
-function alertMsg(type, msg, ms) {
-  const tID = setInterval(() => {
-    alertText.innerText = msg;
-    alertText.classList.add(`alert-${type}`);
-    alertText.classList.add('show-alert');
-  }, 0);
-
-  setTimeout(() => {
-    clearInterval(tID);
-    alertText.classList.remove(`alert-${type}`);
-    alertText.classList.remove('show-alert');
-  }, ms);
-}
 
 const dateToSum = (aDate) => {
   const myDateArr = [
@@ -40,7 +25,7 @@ const dateToSum = (aDate) => {
   return mySum;
 };
 
-function showLuckyNumsByAlert(dateSum) {
+function showLuckyNums(dateSum) {
   const arrOfLuckyNumbers = [];
   for (let i = 1; i <= dateSum; i++) {
     if (dateSum % i === 0) {
@@ -54,13 +39,15 @@ function showLuckyNumsByAlert(dateSum) {
 }
 
 function removeLuckyBtn() {
-  const luckyElement = btnContainer.querySelector('[data-btn="show"]');
+  let luckyElement = btnContainer.querySelector('[data-btn="show"]');
   if (!luckyElement) {
     return;
   }
   btnContainer.style.gridTemplateColumns = '1fr 1fr';
   btnContainer.style.justifyItems = 'center';
   luckyElement.remove();
+  luckyElement = null;
+  console.log(luckyElement);
   luckyPara.innerText = '';
 }
 
@@ -79,6 +66,10 @@ function displayOutput(numberValue, cond) {
     `;
 }
 
+function displayErrorMsgs(text) {
+  luckyPara.innerText = text;
+}
+
 function handleContainerClick(e) {
   e.preventDefault();
   if (!('btn' in e.target.dataset)) {
@@ -93,17 +84,17 @@ function handleContainerClick(e) {
     birthInput.value = '';
     numberInput.value = '';
     output.innerText = '';
+    luckyPara.innerText = '';
     removeLuckyBtn();
-    alertMsg('success', 'Cleared', 1000);
     return;
   }
 
   if (!(birthInput.value && numberInput.value)) {
-    alertMsg('danger', 'Please fill both input fields 🙏', 1000);
+    displayErrorMsgs('Please fill both input fields 🙏');
     return;
   }
-  if (numberVal < 0) {
-    alertMsg('danger', 'Lucky number cant be negative ❌', 1000);
+  if (numberVal <= 0) {
+    displayErrorMsgs("Lucky number can't be zero or negative 🙏");
     return;
   }
 
@@ -113,7 +104,7 @@ function handleContainerClick(e) {
     btnContainer.querySelector('[data-btn="show"]') &&
     btnClicked === 'show'
   ) {
-    showLuckyNumsByAlert(sumOfDate);
+    showLuckyNums(sumOfDate);
     return;
   }
 
@@ -124,8 +115,6 @@ function handleContainerClick(e) {
   } else {
     displayOutput(numberVal, false);
   }
-
-  alertMsg('success', 'Done ✅', 1000);
 }
 
 btnContainer.addEventListener('click', handleContainerClick);
@@ -134,5 +123,6 @@ btnContainer.addEventListener('click', handleContainerClick);
   singleInput.addEventListener('click', () => {
     removeLuckyBtn();
     output.innerText = '';
+    luckyPara.innerText = '';
   });
 });
