@@ -93,8 +93,8 @@ function handleContainerClick(e) {
     displayErrorMsgs('Please fill both input fields 🙏');
     return;
   }
-  if (numberVal <= 0) {
-    displayErrorMsgs("Lucky number can't be zero or negative 🙏");
+  if (numberVal < 0) {
+    displayErrorMsgs("Lucky number can't be negative ❌");
     return;
   }
 

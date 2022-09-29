@@ -16,7 +16,7 @@ A website which can help you to check whether your birthday is lucky or not. Ent
 - Enter Lucky Number
 - Error Msgs can be seen
   - when both input fields are empty.
-  - when lucky number input is negative or zero.
+  - when lucky number input is negative.
 - If you click on <font color="cyan"> **Clear**</font> button, it clears both inputs, clears output.
 - If you click <font color="red"> **Check**</font> button without any input, error msg will be seen saying to "fill both input fields".
 - If you click on <font color="red"> **Check**</font> button with inputs present, the output is seen below.
