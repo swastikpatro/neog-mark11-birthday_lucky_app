@@ -30,3 +30,7 @@ A website which can help you to check whether your birthday is lucky or not. Ent
     - If you click <font color="orange"> **All Lucky Nums**</font> button, irrespective of the output(right or wrong), a paragraph can be seen showing all the lucky numbers for that birthdate respectively.
 
   - **If you click on any inputs with <font color="orange"> **All Lucky Nums**</font> button, previous output or error msg present on the screen, I take it as the user is changing inputs so <font color="orange"> **All Lucky Nums**</font> button gets removed with previous output or error msg gets cleared.**
+
+## Snapshot of the app
+
+![Birthday Lucky](birthday-snap.JPG)
