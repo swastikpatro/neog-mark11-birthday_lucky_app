@@ -58,7 +58,7 @@ function showLuckyBtn() {
   return;
 }
 
-function displayOutput(numberValue, cond) {
+function displayOutput(cond) {
   output.innerHTML = ` 
   <span class='output-num' style="color:${cond ? 'green' : 'red'}">
     Your birthday is ${cond ? 'a lucky number 🎉🎊' : 'not that lucky 😕'} 
@@ -111,9 +111,9 @@ function handleContainerClick(e) {
   showLuckyBtn();
 
   if (sumOfDate % numberVal === 0) {
-    displayOutput(numberVal, true);
+    displayOutput(true);
   } else {
-    displayOutput(numberVal, false);
+    displayOutput(false);
   }
 }
 
