@@ -468,27 +468,29 @@ p span {
 }
 
 .output-section {
-  height: 2.5rem;
-  width: 85%;
-  max-width: 400px;
+  min-height: 2.5rem;
+  width: 95%;
+  max-width: 500px;
   margin: 0 auto;
-  padding-top: 0.25rem;
+  padding: 0.25rem;
   border-radius: var(--borderRadius);
   background: var(--white);
   text-align: center;
   font-size: 0.85rem;
   color: var(--grey-500);
   letter-spacing: var(--letterSpacing);
+  display: grid;
+  place-items: center;
 }
 
 .output-section span {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 800;
 }
 
 @media screen and (min-width: 1000px) {
   .output-section {
-    height: 3rem;
+    min-height: 3rem;
     font-size: 1rem;
   }
 }
