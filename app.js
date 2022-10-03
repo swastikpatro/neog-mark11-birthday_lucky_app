@@ -61,7 +61,7 @@ function showLuckyBtn() {
 function displayOutput(cond) {
   output.innerHTML = ` 
   <span class='output-num' style="color:${cond ? 'green' : 'red'}">
-    Your birthday is ${cond ? 'a lucky number 🎉🎊' : 'not that lucky 😕'} 
+    Your birthday is ${cond ? 'a lucky 🎉🎊' : 'not that lucky 😕'} 
   </span> 
     `;
 }
